@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/indexstyles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+  <title>Ecomm Shop</title>
+</head>
+<body>
+  {{> adminheader}}
+    <section>
+      <div>
+        <form method="POST" enctype="multipart/form-data">
+          <h1 class="signinTitle">
+            Edit Product
+          </h1>
+          <h4>Product Title</h4>
+          <input name="title" value="{{ title }}">
+          <div class="errors">
+            {{ errorsTitle }}
+          </div>
+          <h4>Product Price</h4>
+          <input name="price" value="{{ price }}">
+          <div class="errors">
+            {{ errorsPrice }}
+          </div>
+          <h4>*Optional</h4>
+          <input type="file" name="image">
+          <div class="errors">
+            {{ error }}
+          </div>
+          <button>Submit</button>
+        </form>
+      </div>
+    </section>
+</body>
+</html>

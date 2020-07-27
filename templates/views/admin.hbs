@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/indexstyles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+  <title>Ecomm Shop</title>
+</head>
+<body>
+  {{> adminheader}}
+  <section>
+    <div class="container">
+      <div class="navbar_ecomm">
+        <h1 class="adminTitle">
+              Products
+            </h1>
+      </div>
+      <div class="navbar_item">
+        <a class="btn" href="/admin/products/new">
+          <button>New Product</button>
+        </a>
+      </div>
+    </div>
+    <tr>
+      <div class="products">
+        <table>
+          <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </table>
+        <div class="productRow1">
+          <p id="title1">{{ title1 }}</p>
+          <p id="price1">${{ price1 }}</p>
+          <a class="edit" href="/admin/products/{{ id1 }}/edit">
+            <button id="edit1">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id1 }}/delete">
+            <button id="delete1">Delete</button>
+          </form>
+        </div>
+        <div class="productRow2">
+          <p id="title2">{{ title2 }}</p>
+          <p id="price2">${{ price2 }}</p>
+          <a class="edit" href="/admin/products/{{ id2 }}/edit">
+            <button id="edit2">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id2 }}/delete">
+            <button id="delete2">Delete</button>
+          </form>
+        </div>
+        <div class="productRow3">
+          <p id="title3">{{ title3 }}</p>
+          <p id="price3">${{ price3 }}</p>
+          <a class="edit" href="/admin/products/{{ id3 }}/edit">
+            <button id="edit3">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id3 }}/delete">
+            <button id="delete3">Delete</button>
+          </form>
+        </div>
+        <div class="productRow4">
+          <p id="title4">{{ title4 }}</p>
+          <p id="price4">${{ price4 }}</p>
+          <a class="edit" href="/admin/products/{{ id4 }}/edit">
+            <button id="edit4">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id4 }}/delete">
+            <button id="delete4">Delete</button>
+          </form>
+        </div>
+        <div class="productRow5">
+          <p id="title5">{{ title5 }}</p>
+          <p id="price5">${{ price5 }}</p>
+          <a class="edit" href="/admin/products/{{ id5 }}/edit">
+            <button id="edit5">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id5 }}/delete">
+            <button id="delete5">Delete</button>
+          </form>
+        </div>
+        <div class="productRow6">
+          <p id="title6">{{ title6 }}</p>
+          <p id="price6">${{ price6 }}</p>
+          <a class="edit" href="/admin/products/{{ id6 }}/edit">
+            <button id="edit6">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id6 }}/delete">
+            <button id="delete6">Delete</button>
+          </form>
+        </div>
+        <div class="productRow7">
+          <p id="title7">{{ title7 }}</p>
+          <p id="price7">${{ price7 }}</p>
+          <a class="edit" href="/admin/products/{{ id7 }}/edit">
+            <button id="edit7">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id7 }}/delete">
+            <button id="delete7">Delete</button>
+          </form>
+        </div>
+        <div class="productRow8">
+          <p id="title8">{{ title8 }}</p>
+          <p id="price8">${{ price8 }}</p>
+          <a class="edit" href="/admin/products/{{ id8 }}/edit">
+            <button id="edit8">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id8 }}/delete">
+            <button id="delete8">Delete</button>
+          </form>
+        </div>
+        <div class="productRow9">
+          <p id="title9">{{ title9 }}</p>
+          <p id="price9">${{ price9 }}</p>
+          <a class="edit" href="/admin/products/{{ id9 }}/edit">
+            <button id="edit9">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id9 }}/delete">
+            <button id="delete9">Delete</button>
+          </form>
+        </div>
+        <div class="productRow10">
+          <p id="title10">{{ title10 }}</p>
+          <p id="price10">${{ price10 }}</p>
+          <a class="edit" href="/admin/products/{{ id10 }}/edit">
+            <button id="edit10">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id10 }}/delete">
+            <button id="delete10">Delete</button>
+          </form>
+        </div>
+        <div class="productRow11">
+          <p id="title11">{{ title11 }}</p>
+          <p id="price11">${{ price11 }}</p>
+          <a class="edit" href="/admin/products/{{ id11 }}/edit">
+            <button id="edit11">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id11 }}/delete">
+            <button id="delete11">Delete</button>
+          </form>
+        </div>
+        <div class="productRow12">
+          <p id="title12">{{ title12 }}</p>
+          <p id="price12">${{ price12 }}</p>
+          <a class="edit" href="/admin/products/{{ id12 }}/edit">
+            <button id="edit12">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id12 }}/delete">
+            <button id="delete12">Delete</button>
+          </form>
+        </div>
+        <div class="productRow13">
+          <p id="title13">{{ title13 }}</p>
+          <p id="price13">${{ price13 }}</p>
+          <a class="edit" href="/admin/products/{{ id13 }}/edit">
+            <button id="edit13">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id13 }}/delete">
+            <button id="delete13">Delete</button>
+          </form>
+        </div>
+        <div class="productRow14">
+          <p id="title14">{{ title14 }}</p>
+          <p id="price14">${{ price14 }}</p>
+          <a class="edit" href="/admin/products/{{ id14 }}/edit">
+            <button id="edit14">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id14 }}/delete">
+            <button id="delete14">Delete</button>
+          </form>
+        </div>
+        <div class="productRow15">
+          <p id="title15">{{ title15 }}</p>
+          <p id="price15">${{ price15 }}</p>
+          <a class="edit" href="/admin/products/{{ id15 }}/edit">
+            <button id="edit15">Edit</button>
+          </a>
+          <form class="delete" method="post" action="/admin/products/{{ id15 }}/delete">
+            <button id="delete15">Delete</button>
+          </form>
+        </div>
+      </div>
+    </tr>
+  </section>
+  <script type="text/javascript" src="/js/admin.js"></script>
+</body>
+</html>

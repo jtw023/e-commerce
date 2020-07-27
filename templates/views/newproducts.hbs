@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/indexstyles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+  <title>Ecomm Shop</title>
+</head>
+<body>
+  {{> adminheader}}
+  <section>
+    <div class="rules">
+      <form method="post" enctype="multipart/form-data">
+        <h1 class="signinTitle">
+          Create A New Product
+        </h1>
+        <h4>Product Title</h4>
+        <p class="titleRules">
+          ✓ Title must be between 5 and 40 characters
+        </p>
+        <input id="title" placeholder="Title" name="title">
+        <div class="errors">
+          {{ errorsTitle }}
+        </div>
+        <h4>Product Price</h4>
+        <p class="priceRules">
+          ✓ Price must contain a number greater than 1 with no letters or special characters
+        </p>
+        <input id="price" placeholder="Price" name="price">
+        <div class="errors">
+          {{ errorsPrice }}
+        </div>
+        <h4>Product Picture</h4>
+        <div class="optional">
+          *Optional
+        </div>
+        <input id="file" type="file" name="image">
+        <button>Submit</button>
+      </form>
+    </div>
+  </section>
+  <script type="text/javascript" src="/js/newproducts.js"></script>
+</body>
+</html>

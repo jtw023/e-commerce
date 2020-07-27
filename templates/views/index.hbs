@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/indexstyles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+  <title>Ecomm Shop</title>
+</head>
+<body>
+  <header>
+    {{> header}}
+      <nav class="navbar1">
+        <div class="container">
+          <div class="navbar_ecomm">
+              <h3 class="title">EComm Shop</h3>
+          </div>
+          <div class="navbar_item">
+            <div class="navbar_buttons">
+              <div>
+                <a class="adminbtnhome" href="/admin/products"><i class="fa fa-star"></i> Admin Panel</a>
+              </div>
+              <div>
+                <a class="cartbtn" href="/cart"><i class="fa fa-shopping-cart"></i> Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+    <div>
+      <img class="banner" src="/images/e-commerce_banner.png" alt="">
+    </div>
+    <div class="wrapper">
+      <div class="productlist">
+        <div class="productlistitem1">
+          <img src="data:image/png;base64, {{ image1 }}">
+          <p class="productTitle1">
+            {{ title1 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price1 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id1 }}" name="productId">
+            <button id="addcart" class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem2">
+          <img src="data:image/png;base64, {{ image2 }}">
+          *BOGO
+          <p class="productTitle2">
+            {{ title2 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price2 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id2 }}" name="productId">
+            <button id="addcartbtn" class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem3">
+          <img src="data:image/png;base64, {{ image3 }}">
+          <p class="productTitle3">
+            {{ title3 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price3 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id3 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem4">
+          <img src="data:image/png;base64, {{ image4 }}">
+          <p class="productTitle4">
+            {{ title4 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price4 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id4 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem5">
+          <img src="data:image/png;base64, {{ image5 }}">
+          <p class="productTitle5">
+            {{ title5 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price5 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id5 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem6">
+          <img src="data:image/png;base64, {{ image6 }}">
+          *BOGO
+          <p class="productTitle6">
+            {{ title6 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price6 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id6 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem7">
+          <img src="data:image/png;base64, {{ image7 }}">
+          <p class="productTitle7">
+            {{ title7 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price7 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id7 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem8">
+          <img src="data:image/png;base64, {{ image8 }}">
+          <p class="productTitle8">
+            {{ title8 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price8 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id8 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem9">
+          <img src="data:image/png;base64, {{ image9 }}">
+          <p class="productTitle9">
+            {{ title9 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price9 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id9 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem10">
+          <img src="data:image/png;base64, {{ image10 }}">
+          *BOGO
+          <p class="productTitle10">
+            {{ title10 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price10 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id10 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem11">
+          <img src="data:image/png;base64, {{ image11 }}">
+          <p class="productTitle11">
+            {{ title11 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price11 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id11 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem12">
+          <img src="data:image/png;base64, {{ image12 }}">
+          <p class="productTitle12">
+            {{ title12 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price12 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id12 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem13">
+          <img src="data:image/png;base64, {{ image13 }}">
+          <p class="productTitle13">
+            {{ title13 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price13 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id13 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem14">
+          <img src="data:image/png;base64, {{ image14 }}">
+          <p class="productTitle14">
+            {{ title14 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price14 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id14 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+        <div class="productlistitem15">
+          <img src="data:image/png;base64, {{ image15 }}">
+          <p class="productTitle15">
+            {{ title15 }}
+          </p>
+          <br>
+          <p class="productPrice">
+            ${{ price15 }}
+          </p>
+          <form action="/cart/products" method="post">
+            <input hidden value="{{ id15 }}" name="productId">
+            <button class="addcartbtn">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </section>
+    <script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>
