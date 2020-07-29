@@ -14,13 +14,15 @@
     display: flex;
     justify-content: center;
     margin: 4vh 0;
+    width: 100%;
 }
 
-#paybtn {
-    margin: 0;
-}
-
-body {
+.form {
+    border: 2px solid #707070;
+    background-color: rgba(181, 179, 179, 0.52);
+    width: 85vw;
+    margin: 0 auto;
+    margin-bottom: 4vh;
     -ms-flex-line-pack: center;
     align-content: center;
     -webkit-box-align: center;
@@ -33,6 +35,9 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     font-family: 'Raleway';
+}
+
+body {
 }
 
 .form-container .field-container:first-of-type {
@@ -54,11 +59,13 @@ body {
 .field-container input {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    height: 4.5vh;
 }
 
 .field-container {
     position: relative;
 }
+
 .form-container {
     display: grid;
     grid-column-gap: 10px;
@@ -74,15 +81,15 @@ body {
 
 .paymentInfo {
     width: 75vw;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: auto auto;
-    align-items: center;
-    margin: auto;
 }
 
 .container.preload {
     width: 100%;
     display: grid;
+    grid-template-columns: auto;
     height: 45vh;
     padding: 0;
     margin: auto;
@@ -94,32 +101,25 @@ label {
 }
 
 .ccicon {
-    height: 38px;
+    height: 30px;
+    width: 60px;
     position: absolute;
     right: 6px;
-    top: calc(50% - 17px);
-    width: 60px;
+    top: calc(50% - 12px);
+    z-index: 99;
 }
 
 /* CREDIT CARD IMAGE STYLING */
-.preload * {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
-}
 
 .container {
     width: 100%;
-    max-width: 400px;
-    max-height: 251px;
     height: 54vw;
     padding: 20px;
 }
 
 #ccsingle {
     position: absolute;
-    right: 15px;
+    right: 5px;
     top: 20px;
 }
 
@@ -151,16 +151,20 @@ label {
 /* CHANGEABLE CARD ELEMENTS */
 .creditcard .lightcolor,
 .creditcard .darkcolor {
-    -webkit-transition: fill 0.5s;
-    transition: fill 0.5s;
+    -webkit-transition: fill 0.8s;
+    transition: fill 0.8s;
 }
 
 .creditcard .lightblue {
-    fill: #03a9f4;
+    fill: #1a1f71;
 }
 
 .creditcard .lightbluedark {
-    fill: #0288d1;
+    fill: #000066;
+}
+
+.creditcard .darkblue {
+    fill: #002663;
 }
 
 .creditcard .red {
@@ -204,7 +208,7 @@ label {
 }
 
 .creditcard .yellow {
-    fill: #ffeb3b;
+    fill: #f7b600;
 }
 
 .creditcard .yellowdark {
@@ -212,11 +216,11 @@ label {
 }
 
 .creditcard .orange {
-    fill: #ff9800;
+    fill: #f9a021;
 }
 
 .creditcard .orangedark {
-    fill: #ef6c00;
+    fill: #e55c20;
 }
 
 .creditcard .grey {
@@ -225,6 +229,14 @@ label {
 
 .creditcard .greydark {
     fill: #616161;
+}
+
+.creditcard .white {
+    fill: #fff;
+}
+
+.creditcard .black {
+    fill: #000;
 }
 
 /* FRONT OF CARD */
@@ -342,7 +354,9 @@ label {
 }
 
 .creditcard {
-    width: 50vw;
+    width: 35vw;
+    margin-left: 3.8vw;
+    margin-top: 10vh;
     display: grid;
     grid-template-columns: auto;
     -webkit-transform-style: preserve-3d;
@@ -351,6 +365,8 @@ label {
     -webkit-transition: -webkit-transform 0.6s;
     transition: transform 0.6s;
     transition: transform 0.6s, -webkit-transform 0.6s;
+    cursor: pointer;
+    position: relative;
 }
 
 .creditcard .front,
@@ -718,6 +734,7 @@ label {
 
 .adminbtn {
     color: #005eff;
+    height: 2.5vh;
 }
 
 .adminbtnhome {
@@ -977,6 +994,53 @@ button {
     }
 }
 
+@media screen and (max-width: 994px) {
+    .paymentInfo {
+        width: 75vw;
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0 auto;
+        padding: 0 2vw;
+        height: 850px;
+    }
+
+    .instapayment {
+        margin-top: 2vh;
+    }
+
+    #paybtn {
+        margin: -200px;
+    }
+
+    .container.preload {
+        height: 200px;
+    }
+
+    .creditcard {
+        width: 110%;
+        max-width: 400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transition: -webkit-transform 2s ease-out;
+        -webkit-transition: -webkit-transform 2s ease-out;
+        transition: transform 0.6s;
+        transition: transform 0.6s, -webkit-transform 0.6s;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .form-container {
+        margin: 1px auto;
+    }
+
+    .payment-title {
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 630px) {
     .edit {
         display: flex;
@@ -1028,6 +1092,17 @@ button {
     #delete15 {
         margin: 0;
         margin-right: 4vw;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .ccicon {
+        height: 30px;
+        width: 60px;
+        position: absolute;
+        right: 6px;
+        top: calc(50% + 7px);
+        z-index: 99;
     }
 }
 
