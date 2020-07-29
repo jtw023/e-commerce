@@ -115,6 +115,15 @@ let amex_single = `<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohe
 //Generate random card number from list of known test numbers
 const randomCard = function () {
     let testCards = [
+        '4012888888881881',
+        '4111111111111111',
+        '5105105105105100',
+        '5555555555554444',
+        '6011000990139424',
+        '6011111111111117',
+        '3787 344936 71000',
+        '3714 496353 98431',
+        '3782 822463 10005',
         '4000 0566 5566 5556',
         '5200 8282 8282 8210',
         '3714 496353 98431',
@@ -259,6 +268,6 @@ cardnumber.addEventListener('focus', (e) => {
 paybtn.addEventListener('click', (e) => {
     stopInterval();
     alert(
-        'Congratulations! Your fake order has been subnmitted. Do not expect anything to arrive at your door.'
+        'Congratulations! Your fake order has been submitted. Do not expect anything to arrive at your door.'
     );
 });
