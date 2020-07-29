@@ -16,19 +16,24 @@ router.post('/cart/products', async (req, res) => {
         cart = await cartsRepo.getOne(req.session.cartId);
     }
 
-    const existingItem = cart.items.find(
-        (item) => item.id === req.body.productId
-    );
+    try {
+        const existingItem = cart.items.find(
+            (item) => item.id === req.body.productId
+        );
 
-    if (existingItem) {
-        existingItem.quantity++;
-    } else {
-        cart.items.push({ id: req.body.productId, quantity: 1 });
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.items.push({ id: req.body.productId, quantity: 1 });
+        }
+
+        await cartsRepo.update(cart.id, {
+            items: cart.items,
+        });
+    } catch {
+        cart = await cartsRepo.create({ items: [] });
+        req.session.cartId = cart.id;
     }
-
-    await cartsRepo.update(cart.id, {
-        items: cart.items,
-    });
 
     res.redirect('/cart');
 });
@@ -40,7 +45,11 @@ router.get('/cart', async (req, res) => {
 
     const cart = await cartsRepo.getOne(req.session.cartId);
 
-    if (cart.items === undefined || cart.items.length == 0) {
+    if (
+        cart === undefined ||
+        cart.items === undefined ||
+        cart.items.length == 0
+    ) {
         return res.redirect('/');
     }
 

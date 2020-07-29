@@ -3,12 +3,16 @@ const express = require('express');
 
 // require other files from this project
 const productsRepo = require('../repositories/products');
+const cartsRepo = require('../repositories/carts');
 
 const router = express.Router();
 
 // What to show for the home page
 router.get('/', async (req, res) => {
     const products = await productsRepo.getAll();
+
+    const cart = await cartsRepo.create({ items: [] });
+    req.session.cartId = cart.id;
 
     if (products[14]) {
         const title1 = products[0].title;
