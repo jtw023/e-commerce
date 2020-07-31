@@ -12,7 +12,9 @@ router.get('/', async (req, res) => {
     const products = await productsRepo.getAll();
 
     const cart = await cartsRepo.create({ items: [] });
-    req.session.cartId = cart.id;
+    if (!cart) {
+        req.session.cartId = cart.id;
+    }
 
     if (products[14]) {
         const title1 = products[0].title;

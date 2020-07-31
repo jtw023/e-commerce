@@ -227,7 +227,7 @@ const newInterval = () => {
         ccsingle.innerHTML = visa_single;
     }
     if (cardnumber.value.startsWith('5')) {
-        background.classList.replace('grey', 'lightbluedark');
+        background.classList.replace('grey', 'darkblue');
         foreground.classList.replace('greydark', 'black');
         back.classList.replace('greydark', 'lightblue');
         ccicon.innerHTML = mastercard;
@@ -235,7 +235,7 @@ const newInterval = () => {
     }
     if (cardnumber.value.startsWith('6')) {
         background.classList.replace('grey', 'white');
-        foreground.classList.replace('greydark', 'orangedark');
+        foreground.classList.replace('greydark', 'orange');
         back.classList.replace('greydark', 'lightblue');
         ccicon.innerHTML = discover;
         ccsingle.innerHTML = discover_single;

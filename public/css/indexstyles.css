@@ -1,395 +1,124 @@
+/*********************************
+ *            MAIN STYLES        *
+ *  1.  styles on multiple pages *
+ *           2.  header          *
+ *        3.  admin header       *
+ *         4.  index page        *
+ *         5.  cart page         *
+ * 6.  credit card image styling *
+ *       7.  front of card       *
+ *       8.  back of card        *
+ *      9.  flip animation       *
+ *           ADMIN STYLES        *
+ * 10. styles on multiple pages  *
+ *       11.   admin page        *
+ *       12.  signout page       *
+ *       13.  above 1328px       *
+ * 14. between 1152px and 1327px *
+ *       15.  under 994px        *
+ *       16.  under 630px        *
+ *       17.  under 424px        *
+ *       18.  under 375px        *
+ *********************************/
+
+/*  MAIN STYLES  */
+/* 1.  styles on multiple pages */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.payment-title {
-    width: 100%;
-    text-align: center;
-    margin: 4vh 0;
+img {
+    margin-bottom: 5vh;
+    margin-top: -2vh;
+    height: 15vh;
+    width: 8vw;
 }
 
-.pay {
+h4 {
+    color: black;
+}
+
+input {
+    margin-bottom: 3vh;
+    margin-top: 1vh;
+    border: 2px solid #c1bbbb;
+    border-radius: 5px;
+    height: 3vh;
+    width: 100%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-around;
+    margin-top: 2vh;
+}
+
+li a {
+    margin-right: 2vw;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    color: white;
+    background-color: #2ce98f;
+    border-radius: 5px;
+    border: none;
+    width: 10vw;
+    min-width: 59.8px;
+    max-width: 94.09px;
+    height: 4vh;
+    min-height: 29.89px;
+    max-height: 47.05px;
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 8vh;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.adminbtnhome {
+    color: #005eff;
+    margin-right: 2vw;
+    margin-top: 5vh;
+}
+
+.cartbtn {
+    color: #005eff;
+}
+
+.navbar_item {
     display: flex;
     justify-content: center;
-    margin: 4vh 0;
-    width: 100%;
 }
 
-.form {
-    border: 2px solid #707070;
-    background-color: rgba(181, 179, 179, 0.52);
-    width: 85vw;
-    margin: 0 auto;
-    margin-bottom: 4vh;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
+.navbar_ecomm {
+    display: flex;
     justify-content: center;
-    min-height: 100vh;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    font-family: 'Raleway';
+    align-items: flex-end;
+    margin-top: 5%;
 }
 
-body {
-}
-
-.form-container .field-container:first-of-type {
-    grid-area: name;
-}
-
-.form-container .field-container:nth-of-type(2) {
-    grid-area: number;
-}
-
-.form-container .field-container:nth-of-type(3) {
-    grid-area: expiration;
-}
-
-.form-container .field-container:nth-of-type(4) {
-    grid-area: security;
-}
-
-.field-container input {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    height: 4.5vh;
-}
-
-.field-container {
-    position: relative;
-}
-
-.form-container {
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: auto auto;
-    grid-template-rows: 90px 90px 90px;
-    grid-template-areas: 'name name' 'number number' 'expiration security';
-    width: 75%;
-    float: right;
-    padding: 20px;
-    color: #707070;
-    margin: auto;
-}
-
-.paymentInfo {
-    width: 75vw;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.container.preload {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto;
-    height: 45vh;
-    padding: 0;
-    margin: auto;
-}
-
-label {
-    padding-bottom: 5px;
-    font-size: 13px;
-}
-
-.ccicon {
-    height: 30px;
-    width: 60px;
-    position: absolute;
-    right: 6px;
-    top: calc(50% - 12px);
-    z-index: 99;
-}
-
-/* CREDIT CARD IMAGE STYLING */
-
-.container {
-    width: 100%;
-    height: 54vw;
-    padding: 20px;
-}
-
-#ccsingle {
-    position: absolute;
-    right: 5px;
-    top: 20px;
-}
-
-#ccsingle svg {
-    width: 100px;
-    max-height: 60px;
-}
-
-.creditcard svg#cardfront,
-.creditcard svg#cardback {
-    width: 100%;
-    -webkit-box-shadow: 1px 5px 6px 0px black;
-    box-shadow: 1px 5px 6px 0px black;
-    border-radius: 22px;
-}
-
-#generatecard {
-    cursor: pointer;
-    float: right;
-    font-size: 12px;
-    color: #fff;
-    padding: 2px 4px;
-    background-color: #909090;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-}
-
-/* CHANGEABLE CARD ELEMENTS */
-.creditcard .lightcolor,
-.creditcard .darkcolor {
-    -webkit-transition: fill 0.8s;
-    transition: fill 0.8s;
-}
-
-.creditcard .lightblue {
-    fill: #1a1f71;
-}
-
-.creditcard .lightbluedark {
-    fill: #000066;
-}
-
-.creditcard .darkblue {
-    fill: #002663;
-}
-
-.creditcard .red {
-    fill: #ef5350;
-}
-
-.creditcard .reddark {
-    fill: #d32f2f;
-}
-
-.creditcard .purple {
-    fill: #ab47bc;
-}
-
-.creditcard .purpledark {
-    fill: #7b1fa2;
-}
-
-.creditcard .cyan {
-    fill: #26c6da;
-}
-
-.creditcard .cyandark {
-    fill: #0097a7;
-}
-
-.creditcard .green {
-    fill: #66bb6a;
-}
-
-.creditcard .greendark {
-    fill: #388e3c;
-}
-
-.creditcard .lime {
-    fill: #d4e157;
-}
-
-.creditcard .limedark {
-    fill: #afb42b;
-}
-
-.creditcard .yellow {
-    fill: #f7b600;
-}
-
-.creditcard .yellowdark {
-    fill: #f9a825;
-}
-
-.creditcard .orange {
-    fill: #f9a021;
-}
-
-.creditcard .orangedark {
-    fill: #e55c20;
-}
-
-.creditcard .grey {
-    fill: #bdbdbd;
-}
-
-.creditcard .greydark {
-    fill: #616161;
-}
-
-.creditcard .white {
-    fill: #fff;
-}
-
-.creditcard .black {
-    fill: #000;
-}
-
-/* FRONT OF CARD */
-#svgname {
-    text-transform: uppercase;
-}
-
-#cardfront .st2 {
-    fill: #ffffff;
-}
-
-#cardfront .st3 {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 600;
-}
-
-#cardfront .st4 {
-    font-size: 54.7817px;
-}
-
-#cardfront .st5 {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 400;
-}
-
-#cardfront .st6 {
-    font-size: 33.1112px;
-}
-
-#cardfront .st7 {
-    opacity: 0.6;
-    fill: #ffffff;
-}
-
-#cardfront .st8 {
-    font-size: 24px;
-}
-
-#cardfront .st9 {
-    font-size: 36.5498px;
-}
-
-#cardfront .st10 {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 300;
-}
-
-#cardfront .st11 {
-    font-size: 16.1716px;
-}
-
-#cardfront .st12 {
-    fill: #4c4c4c;
-}
-
-/* BACK OF CARD */
-#cardback .st0 {
-    fill: none;
-    stroke: #0f0f0f;
-    stroke-miterlimit: 10;
-}
-
-#cardback .st2 {
-    fill: #111111;
-}
-
-#cardback .st3 {
-    fill: #f2f2f2;
-}
-
-#cardback .st4 {
-    fill: #d8d2db;
-}
-
-#cardback .st5 {
-    fill: #c4c4c4;
-}
-
-#cardback .st6 {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 400;
-}
-
-#cardback .st7 {
-    font-size: 27px;
-}
-
-#cardback .st8 {
-    opacity: 0.6;
-}
-
-#cardback .st9 {
-    fill: #ffffff;
-}
-
-#cardback .st10 {
-    font-size: 24px;
-}
-
-#cardback .st11 {
-    fill: #eaeaea;
-}
-
-#cardback .st12 {
-    font-family: 'Rock Salt', cursive;
-}
-
-#cardback .st13 {
-    font-size: 37.769px;
-}
-
-/* FLIP ANIMATION */
-.container {
-    perspective: 1000px;
-}
-
-.creditcard {
-    width: 35vw;
-    margin-left: 3.8vw;
-    margin-top: 10vh;
-    display: grid;
-    grid-template-columns: auto;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transition: -webkit-transform 0.6s;
-    -webkit-transition: -webkit-transform 0.6s;
-    transition: transform 0.6s;
-    transition: transform 0.6s, -webkit-transform 0.6s;
-    cursor: pointer;
-    position: relative;
-}
-
-.creditcard .front,
-.creditcard .back {
-    position: absolute;
-    width: 100%;
-    max-width: 400px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
-    color: #47525d;
-}
-
-.creditcard .back {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-
-.creditcard.flipped {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-
+/* 2.  header */
 .nav_container {
     display: grid;
     grid-template-columns: auto auto;
@@ -397,168 +126,61 @@ label {
     height: 8vh;
 }
 
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+/* 3.  admin header */
 .fas {
     margin-left: 2vw;
 }
 
-.edit {
-    margin-left: 48px;
+.adminbtn {
+    color: #005eff;
+    padding-top: 2.5vh;
 }
 
-.delete {
-    margin-left: 40px;
-}
-
-#edit1,
-#edit2,
-#edit3,
-#edit4,
-#edit5,
-#edit6,
-#edit7,
-#edit8,
-#edit9,
-#edit10,
-#edit11,
-#edit12,
-#edit13,
-#edit14,
-#edit15 {
-    background-color: #0675b7;
-    margin-top: 2.3vh;
-    margin-right: 6.8vw;
-}
-
-#delete1,
-#delete2,
-#delete3,
-#delete4,
-#delete5,
-#delete6,
-#delete7,
-#delete8,
-#delete9,
-#delete10,
-#delete11,
-#delete12,
-#delete13,
-#delete14,
-#delete15 {
-    background-color: red;
-    margin-right: 8vw;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: auto auto;
-    height: 8vh;
-}
-
-.admin_container {
-    display: grid;
-    grid-template-columns: auto auto;
-    height: 8vh;
-}
-
-.products {
-    display: grid;
-    grid-template-rows: auto auto;
+.homeDiv {
+    display: flex;
     justify-content: center;
-    margin: 5vh 0;
+    align-items: flex-end;
+    margin-top: 5%;
+}
+
+/* 4.  index page */
+.banner {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5vh;
+    width: 75%;
 }
 
 .wrapper {
     display: flex;
     justify-content: center;
     margin: 7.5vh 0;
-}
-
-.multipiedProduct {
-    width: 25vw;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5vw;
-}
-
-.cartdeletebtn {
-    background-color: red;
-    height: 25px;
-    min-height: 0;
-    width: 25px;
-    min-width: 0;
-}
-
-.h3cart {
-    margin-left: 8vw;
-    margin-top: 4vh;
-}
-
-.cartcontainer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4vh;
-}
-
-.cartgrid {
-    display: grid;
-    grid-template-columns: auto;
-    width: 85vw;
-}
-
-.cartTitle1,
-.cartTitle2,
-.cartTitle3,
-.cartTitle4,
-.cartTitle5,
-.cartTitle6,
-.cartTitle7,
-.cartTitle8,
-.cartTitle9,
-.cartTitle10 {
-    display: flex;
-    justify-content: flex-start;
-    width: 45vw;
-}
-
-.cartitem1,
-.cartitem2,
-.cartitem3,
-.cartitem4,
-.cartitem5,
-.cartitem6,
-.cartitem7,
-.cartitem8,
-.cartitem9,
-.cartitem10 {
-    background-color: rgba(181, 179, 179, 0.52);
-    height: 5vh;
-    text-align: center;
-    padding: 0 2%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 1.3rem;
-}
-
-.totalLine {
-    height: 3.5vh;
-    background-color: #0675b7;
-    color: white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 5vw;
-    margin-top: 1vh;
-}
-
-.total {
-    display: flex;
-    flex-direction: row;
-}
-
-.amount {
-    margin-right: 61vw;
 }
 
 .productlist {
@@ -643,6 +265,490 @@ label {
     color: black;
 }
 
+.navbar_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 1vh;
+}
+
+/* 5.  cart page */
+.admin_navbar_item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 5%;
+}
+
+.amount {
+    margin-right: 61vw;
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+}
+
+.totalLine {
+    height: 3.5vh;
+    background-color: #0675b7;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5vw;
+    margin-top: 1vh;
+}
+
+.cartitem1,
+.cartitem2,
+.cartitem3,
+.cartitem4,
+.cartitem5,
+.cartitem6,
+.cartitem7,
+.cartitem8,
+.cartitem9,
+.cartitem10 {
+    background-color: rgba(181, 179, 179, 0.52);
+    height: 5vh;
+    text-align: center;
+    padding: 0 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+}
+
+.cartTitle1,
+.cartTitle2,
+.cartTitle3,
+.cartTitle4,
+.cartTitle5,
+.cartTitle6,
+.cartTitle7,
+.cartTitle8,
+.cartTitle9,
+.cartTitle10 {
+    display: flex;
+    justify-content: flex-start;
+    width: 45vw;
+}
+
+.cartgrid {
+    display: grid;
+    grid-template-columns: auto;
+    width: 85vw;
+}
+
+.cartcontainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4vh;
+}
+
+.h3cart {
+    margin-left: 8vw;
+    margin-top: 4vh;
+}
+
+.cartdeletebtn {
+    background-color: red;
+    height: 25px;
+    min-height: 0;
+    width: 25px;
+    min-width: 0;
+}
+
+.multipliedProduct {
+    width: 25vw;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5vw;
+}
+
+.payment-title {
+    width: 100%;
+    text-align: center;
+    margin: 4vh 0;
+}
+
+.pay {
+    display: flex;
+    justify-content: center;
+    margin: 4vh 0;
+    width: 100%;
+}
+
+.form {
+    border: 2px solid #707070;
+    background-color: rgba(181, 179, 179, 0.52);
+    width: 85vw;
+    margin: 0 auto;
+    margin-bottom: 4vh;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 100vh;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-family: 'Raleway';
+}
+
+.form-container .field-container:first-of-type {
+    grid-area: name;
+}
+
+.form-container .field-container:nth-of-type(2) {
+    grid-area: number;
+}
+
+.form-container .field-container:nth-of-type(3) {
+    grid-area: expiration;
+}
+
+.form-container .field-container:nth-of-type(4) {
+    grid-area: security;
+}
+
+.field-container input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 4.5vh;
+}
+
+.field-container {
+    position: relative;
+}
+
+.form-container {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 90px 90px 90px;
+    grid-template-areas: 'name name' 'number number' 'expiration security';
+    width: 75%;
+    float: right;
+    padding: 20px;
+    color: #707070;
+    margin: auto;
+}
+
+.paymentInfo {
+    width: 75vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.container.preload {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    height: 45vh;
+    padding: 0;
+    margin: auto;
+}
+
+table {
+    border-bottom: 1px solid #555353;
+    width: 100%;
+    margin: 0 auto;
+}
+
+th {
+    vertical-align: middle;
+    height: 5vh;
+}
+
+label {
+    padding-bottom: 5px;
+    font-size: 13px;
+}
+
+.ccicon {
+    height: 30px;
+    width: 60px;
+    position: absolute;
+    right: 6px;
+    top: calc(50% - 12px);
+    z-index: 99;
+}
+
+/* 6.  credit card image styling */
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+#ccsingle {
+    position: absolute;
+    right: 5px;
+    top: 20px;
+}
+
+#ccsingle svg {
+    width: 100px;
+    max-height: 60px;
+}
+
+.creditcard svg#cardfront,
+.creditcard svg#cardback {
+    width: 100%;
+    -webkit-box-shadow: 1px 5px 6px 0px black;
+    box-shadow: 1px 5px 6px 0px black;
+    border-radius: 22px;
+}
+
+#generatecard {
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    color: #fff;
+    padding: 2px 4px;
+    background-color: #909090;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.creditcard .lightcolor,
+.creditcard .darkcolor {
+    -webkit-transition: fill 0.8s;
+    transition: fill 0.8s;
+}
+
+.creditcard .lightblue {
+    fill: #1a1f71;
+}
+
+.creditcard .darkblue {
+    fill: #000066;
+}
+
+.creditcard .orange {
+    fill: #e55c20;
+}
+
+.creditcard .grey {
+    fill: #bdbdbd;
+}
+
+.creditcard .greydark {
+    fill: #616161;
+}
+
+.creditcard .white {
+    fill: #fff;
+}
+
+.creditcard .black {
+    fill: #000;
+}
+
+/* 7.  front of card */
+#svgname {
+    text-transform: uppercase;
+}
+
+#cardfront .st2 {
+    fill: #ffffff;
+}
+
+#cardfront .st3 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+}
+
+#cardfront .st4 {
+    font-size: 54.7817px;
+}
+
+#cardfront .st5 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+#cardfront .st6 {
+    font-size: 33.1112px;
+}
+
+#cardfront .st7 {
+    opacity: 0.6;
+    fill: #ffffff;
+}
+
+#cardfront .st8 {
+    font-size: 24px;
+}
+
+#cardfront .st9 {
+    font-size: 36.5498px;
+}
+
+#cardfront .st10 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+}
+
+#cardfront .st11 {
+    font-size: 16.1716px;
+}
+
+#cardfront .st12 {
+    fill: #4c4c4c;
+}
+
+/* 8.  back of card */
+#cardback .st0 {
+    fill: none;
+    stroke: #0f0f0f;
+    stroke-miterlimit: 10;
+}
+
+#cardback .st2 {
+    fill: #111111;
+}
+
+#cardback .st3 {
+    fill: #f2f2f2;
+}
+
+#cardback .st4 {
+    fill: #d8d2db;
+}
+
+#cardback .st5 {
+    fill: #c4c4c4;
+}
+
+#cardback .st6 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+#cardback .st7 {
+    font-size: 27px;
+}
+
+#cardback .st8 {
+    opacity: 0.6;
+}
+
+#cardback .st9 {
+    fill: #ffffff;
+}
+
+#cardback .st10 {
+    font-size: 24px;
+}
+
+#cardback .st11 {
+    fill: #eaeaea;
+}
+
+#cardback .st12 {
+    font-family: 'Rock Salt', cursive;
+}
+
+#cardback .st13 {
+    font-size: 37.769px;
+}
+
+/* 9.  flip animation */
+.container {
+    perspective: 1000px;
+}
+
+.creditcard {
+    width: 35vw;
+    margin-left: 3.8vw;
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: -webkit-transform 0.6s;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    transition: transform 0.6s, -webkit-transform 0.6s;
+    cursor: pointer;
+    position: relative;
+}
+
+.creditcard .front,
+.creditcard .back {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    color: #47525d;
+}
+
+.creditcard .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.creditcard.flipped {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* ADMIN STYLES */
+/* 10.  styles on mutliple pages */
+.signuplink {
+    color: #005eff;
+    margin-bottom: 1vh;
+    display: flex;
+    justify-content: center;
+}
+
+.signinTitle {
+    margin: 3vh;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.errors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    margin-bottom: 3vh;
+}
+
+.rules {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    color: grey;
+}
+
+/* 11.  admin page */
+.btn {
+    height: 4vh;
+    margin-top: 5.5vh;
+}
+
+.products p {
+    width: 20vw;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+}
+
 .productRow1,
 .productRow2,
 .productRow3,
@@ -665,26 +771,68 @@ label {
     position: relative;
 }
 
-.products p {
-    width: 20vw;
-    margin: 25px 0;
+.adminTitle {
     display: flex;
-    justify-content: center;
-}
-
-.info {
-    display: flex;
-    justify-content: center;
-}
-
-.navbar_info {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    list-style: none;
+    height: 10vh;
 }
 
+.edit {
+    margin-left: 48px;
+}
+
+.delete {
+    margin-left: 40px;
+}
+
+#edit1,
+#edit2,
+#edit3,
+#edit4,
+#edit5,
+#edit6,
+#edit7,
+#edit8,
+#edit9,
+#edit10,
+#edit11,
+#edit12,
+#edit13,
+#edit14,
+#edit15 {
+    background-color: #0675b7;
+    margin-top: 2.3vh;
+    margin-right: 6.8vw;
+}
+
+#delete1,
+#delete2,
+#delete3,
+#delete4,
+#delete5,
+#delete6,
+#delete7,
+#delete8,
+#delete9,
+#delete10,
+#delete11,
+#delete12,
+#delete13,
+#delete14,
+#delete15 {
+    background-color: red;
+    margin-right: 8vw;
+}
+
+.products {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    margin: 5vh 0;
+}
+
+/* 12.  signout page */
 .html {
     background-color: #0675b7;
 }
@@ -718,193 +866,48 @@ label {
     align-items: center;
 }
 
-.btn {
-    height: 4vh;
-    margin-top: 5.5vh;
-}
-
 .low_center {
     display: grid;
     grid-template-columns: auto;
 }
 
-.title {
-    font-size: 2rem;
+/* 13.  above 1328px */
+@media screen and (min-width: 1328px) {
+    .edit {
+        margin-left: 0;
+        width: 15vw;
+        margin: 0 7vw;
+    }
+
+    .delete {
+        margin-left: 0;
+        width: 5vw;
+        margin: 0 4.5vw;
+    }
+
+    #addcart {
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 0;
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    #addcartbtn {
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 0;
+        margin-top: 2vh;
+        width: 100%;
+    }
+
+    .amount {
+        margin-right: 65.3vw;
+        margin-left: 2.2vw;
+    }
 }
 
-.adminbtn {
-    color: #005eff;
-    height: 2.5vh;
-}
-
-.adminbtnhome {
-    color: #005eff;
-    margin-right: 2vw;
-    margin-top: 5vh;
-}
-
-.cartbtn {
-    color: #005eff;
-}
-
-.social {
-    display: flex;
-    justify-content: center;
-}
-
-.navbar_social {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
-
-.navbar_item {
-    display: flex;
-    justify-content: center;
-}
-
-.admin_navbar_item {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 5%;
-}
-
-.navbar_buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 1vh;
-}
-
-.navbar_ecomm {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 5%;
-}
-
-.homeDiv {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 5%;
-}
-
-.banner {
-    display: block;
-    margin: 0 auto;
-    margin-top: 5vh;
-    width: 75%;
-}
-
-.errors {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: red;
-    margin-bottom: 3vh;
-}
-
-.rules {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-    color: grey;
-}
-
-.signuplink {
-    color: #005eff;
-    margin-bottom: 1vh;
-    display: flex;
-    justify-content: center;
-}
-
-.signinTitle {
-    margin: 3vh;
-    display: flex;
-    justify-content: center;
-    color: black;
-}
-
-.adminTitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-}
-
-img {
-    margin-bottom: 5vh;
-    margin-top: -2vh;
-    height: 15vh;
-    width: 8vw;
-}
-
-table {
-    border-bottom: 1px solid #555353;
-    width: 100%;
-    margin: 0 auto;
-}
-
-th {
-    vertical-align: middle;
-    height: 5vh;
-}
-
-h4 {
-    color: black;
-}
-
-input {
-    margin-bottom: 3vh;
-    margin-top: 1vh;
-    border: 2px solid #c1bbbb;
-    border-radius: 5px;
-    height: 3vh;
-    width: 100%;
-}
-
-section {
-    display: grid;
-    grid-template-columns: auto;
-}
-
-form {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: space-around;
-    margin-top: 2vh;
-}
-
-li a {
-    margin-right: 2vw;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
-button {
-    color: white;
-    background-color: #2ce98f;
-    border-radius: 5px;
-    border: none;
-    width: 10vw;
-    min-width: 59.8px;
-    max-width: 94.09px;
-    height: 4vh;
-    min-height: 29.89px;
-    max-height: 47.05px;
-    cursor: pointer;
-    margin: auto;
-    margin-bottom: 2vh;
-}
-
+/* 14.  between 1152px and 1327px */
 @media screen and (min-width: 1152px) and (max-width: 1327px) {
     #edit1,
     #edit2,
@@ -959,41 +962,7 @@ button {
     }
 }
 
-@media screen and (min-width: 1328px) {
-    .edit {
-        margin-left: 0;
-        width: 15vw;
-        margin: 0 7vw;
-    }
-
-    .delete {
-        margin-left: 0;
-        width: 5vw;
-        margin: 0 4.5vw;
-    }
-
-    #addcart {
-        background-color: transparent;
-        border: 1px solid black;
-        border-radius: 0;
-        margin-top: 2vh;
-        width: 100%;
-    }
-
-    #addcartbtn {
-        background-color: transparent;
-        border: 1px solid black;
-        border-radius: 0;
-        margin-top: 2vh;
-        width: 100%;
-    }
-
-    .amount {
-        margin-right: 65.3vw;
-        margin-left: 2.2vw;
-    }
-}
-
+/* 15.  under 994px */
 @media screen and (max-width: 994px) {
     .paymentInfo {
         width: 75vw;
@@ -1041,6 +1010,7 @@ button {
     }
 }
 
+/* 16.  under 630px */
 @media screen and (max-width: 630px) {
     .edit {
         display: flex;
@@ -1095,6 +1065,7 @@ button {
     }
 }
 
+/* 17.  under 424px */
 @media screen and (max-width: 424px) {
     .ccicon {
         height: 30px;
@@ -1106,6 +1077,7 @@ button {
     }
 }
 
+/* 18.  under 375px */
 @media screen and (max-width: 375px) {
     .signBackIn {
         background: none;
