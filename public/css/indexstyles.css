@@ -737,7 +737,7 @@ label {
 /* 11.  admin page */
 .btn {
     height: 4vh;
-    margin-top: 5.5vh;
+    margin: auto;
 }
 
 .products p {
