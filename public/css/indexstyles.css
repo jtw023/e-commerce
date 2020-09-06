@@ -14,11 +14,10 @@
  *       11.   admin page        *
  *       12.  signout page       *
  *       13.  above 1328px       *
- * 14. between 1152px and 1327px *
- *       15.  under 994px        *
- *       16.  under 630px        *
- *       17.  under 424px        *
- *       18.  under 375px        *
+ *       14.  under 994px        *
+ *       15.  under 630px        *
+ *       16.  under 424px        *
+ *       17.  under 375px        *
  *********************************/
 
 /*  MAIN STYLES  */
@@ -115,7 +114,6 @@ button {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 5%;
 }
 
 /* 2.  header */
@@ -159,14 +157,14 @@ button {
 
 .adminbtn {
     color: #005eff;
-    padding-top: 2.5vh;
+    width: 100px;
+    cursor: pointer;
 }
 
 .homeDiv {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 5%;
 }
 
 /* 4.  index page */
@@ -743,7 +741,7 @@ label {
 }
 
 .products p {
-    width: 20vw;
+    width: 19vw;
     margin: 25px 0;
     display: flex;
     justify-content: center;
@@ -779,11 +777,11 @@ label {
 }
 
 .edit {
-    margin-left: 48px;
+    margin: auto;
 }
 
 .delete {
-    margin-left: 40px;
+    margin: auto;
 }
 
 #edit1,
@@ -802,8 +800,7 @@ label {
 #edit14,
 #edit15 {
     background-color: #0675b7;
-    margin-top: 2.3vh;
-    margin-right: 6.8vw;
+    margin: auto;
 }
 
 #delete1,
@@ -822,14 +819,14 @@ label {
 #delete14,
 #delete15 {
     background-color: red;
-    margin-right: 8vw;
+    margin: auto;
 }
 
 .products {
     display: grid;
     grid-template-rows: auto auto;
     justify-content: center;
-    margin: 5vh 0;
+    margin: 10vh 0;
 }
 
 /* 12.  signout page */
@@ -873,18 +870,6 @@ label {
 
 /* 13.  above 1328px */
 @media screen and (min-width: 1328px) {
-    .edit {
-        margin-left: 0;
-        width: 15vw;
-        margin: 0 7vw;
-    }
-
-    .delete {
-        margin-left: 0;
-        width: 5vw;
-        margin: 0 4.5vw;
-    }
-
     #addcart {
         background-color: transparent;
         border: 1px solid black;
@@ -907,62 +892,7 @@ label {
     }
 }
 
-/* 14.  between 1152px and 1327px */
-@media screen and (min-width: 1152px) and (max-width: 1327px) {
-    #edit1,
-    #edit2,
-    #edit3,
-    #edit4,
-    #edit5,
-    #edit6,
-    #edit7,
-    #edit8,
-    #edit9,
-    #edit10,
-    #edit11,
-    #edit12,
-    #edit13,
-    #edit14,
-    #edit15 {
-        background-color: #0675b7;
-        margin-top: 2.3vh;
-        margin-right: 0;
-    }
-
-    .edit {
-        margin-left: 0;
-        width: 15vw;
-        margin: 0 5.8vw;
-    }
-
-    .delete {
-        margin-left: 0;
-        width: 5vw;
-        margin: 0 2.8vw;
-    }
-
-    #delete1,
-    #delete2,
-    #delete3,
-    #delete4,
-    #delete5,
-    #delete6,
-    #delete7,
-    #delete8,
-    #delete9,
-    #delete10,
-    #delete11,
-    #delete12,
-    #delete13,
-    #delete14,
-    #delete15 {
-        background-color: red;
-        margin-top: 2.3vh;
-        margin-right: 0;
-    }
-}
-
-/* 15.  under 994px */
+/* 14.  under 994px */
 @media screen and (max-width: 994px) {
     .paymentInfo {
         width: 75vw;
@@ -1010,62 +940,7 @@ label {
     }
 }
 
-/* 16.  under 630px */
-@media screen and (max-width: 630px) {
-    .edit {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
-
-    #edit1,
-    #edit2,
-    #edit3,
-    #edit4,
-    #edit5,
-    #edit6,
-    #edit7,
-    #edit8,
-    #edit9,
-    #edit10,
-    #edit11,
-    #edit12,
-    #edit13,
-    #edit14,
-    #edit15 {
-        margin: 0;
-        margin-right: 4vw;
-    }
-
-    .delete {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
-
-    #delete1,
-    #delete2,
-    #delete3,
-    #delete4,
-    #delete5,
-    #delete6,
-    #delete7,
-    #delete8,
-    #delete9,
-    #delete10,
-    #delete11,
-    #delete12,
-    #delete13,
-    #delete14,
-    #delete15 {
-        margin: 0;
-        margin-right: 4vw;
-    }
-}
-
-/* 17.  under 424px */
+/* 16.  under 424px */
 @media screen and (max-width: 424px) {
     .ccicon {
         height: 30px;
@@ -1077,7 +952,7 @@ label {
     }
 }
 
-/* 18.  under 375px */
+/* 17.  under 375px */
 @media screen and (max-width: 375px) {
     .signBackIn {
         background: none;

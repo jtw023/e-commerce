@@ -12,7 +12,7 @@ const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 // Defined paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -29,7 +29,7 @@ app.use(express.static(publicDirectoryPath));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
     cookieSession({
-        keys: ['d65485fkjdf54654salkjd54sfoi'],
+        keys: [process.env.COOKIE_SESSION],
     })
 );
 app.use(authRouter);
@@ -39,5 +39,5 @@ app.use(cartsRouter);
 
 // Which port our server should listen to
 app.listen(port, () => {
-    console.log('Server Started on port 3000.');
+    console.log(`Server Started on port ${port}.`);
 });
